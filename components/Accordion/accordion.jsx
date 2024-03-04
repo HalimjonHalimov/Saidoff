@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import { Fade } from "react-awesome-reveal";
 
-const Accordion = ({ title, answer }) => {
+const Accordion = ({ title, answer, i }) => {
   const [accordionOpen, setAccordionOpen] = useState(false);
 
   return (
-    <Fade >
-      <div className="py-2 container mx-auto">
+    <Fade>
+      <div className="pt-2 hover:bg-slate-50 transition-all border-slate-100 border-t border-b">
         <button
           onClick={() => setAccordionOpen(!accordionOpen)}
-          className="flex justify-between w-full"
+          className="group container py-6 mx-auto flex justify-between transition-all"
         >
-          {accordionOpen ? <span>{title} one</span> : <span>{title}</span>}
-
+          <span className="text-[#999999] font-medium text-2xl">0{i}</span>
+          <span className="text-black font-bold text-3xl">{title}</span>
           <svg
             className="fill-black shrink-0 ml-8"
             width="16"
@@ -46,7 +46,9 @@ const Accordion = ({ title, answer }) => {
               : "grid-rows-[0fr] opacity-0"
           }`}
         >
-          <div className="overflow-hidden">{answer}</div>
+          <div className="bg-red-50 overflow-hidden">
+            <div className="w-full h-[400px]"></div>
+          </div>
         </div>
       </div>
     </Fade>
