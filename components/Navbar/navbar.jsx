@@ -1,13 +1,13 @@
 import React from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { Fade, Zoom } from "react-reveal";
+import { Fade, Reveal, Bounce,Flip,Hinge, JackInTheBox, Roll, Rotate, Slide, Zoom  } from "react-awesome-reveal";
 import Logo from "@/public/Logo_White.png";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <Zoom cascade>
+    <Fade  cascade>
       <div className="w-full h-[100px] flex flex-col items-center justify-center bg-[#000000] text-[#FFFFFF]  border-b border-[#FFFFFF33]">
         <div className="container mx-auto flex justify-between items-center">
           <Link href="/">
@@ -29,6 +29,6 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-    </Zoom>
+    </Fade>
   );
 }

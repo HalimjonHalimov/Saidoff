@@ -1,6 +1,6 @@
 import React from "react";
 import { Footer, Navbar } from "..";
-import { Fade } from "react-reveal";
+import { Fade } from "react-awesome-reveal";
 
 export default function Layout({ children }) {
   return (
