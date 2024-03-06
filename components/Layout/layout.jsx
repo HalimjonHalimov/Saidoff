@@ -12,7 +12,7 @@ export default function Layout({ children }) {
   return (
     <>
       <Fade cascade>
-        <div className="w-full min-h-screen flex flex-col overflow-hidden bg-rose-800">
+        <div className="w-full min-h-screen flex flex-col overflow-hidden">
           <Navbar state={navigation} handleToggle={handleToggle} />
           <main className="">{children}</main>
           <Footer />
