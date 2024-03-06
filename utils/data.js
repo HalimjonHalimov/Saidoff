@@ -1,4 +1,15 @@
 import avatar from "@/public/avatar.png";
+import image1 from "../public/partners/1.png";
+import image2 from "../public/partners/2.png";
+import image3 from "../public/partners/3.png";
+import image4 from "../public/partners/4.png";
+import image5 from "../public/partners/5.png";
+import image6 from "../public/partners/6.png";
+import image7 from "../public/partners/11.png";
+import image8 from "../public/partners/12.png";
+import image9 from "../public/partners/13.png";
+import image10 from "../public/partners/14.png";
+import image11 from "../public/partners/15.png";
 export const data = [
   {
     id: 1,
@@ -32,5 +43,62 @@ export const data = [
       description: "Основатель компании “Black burger”",
       avatar: avatar,
     },
+  },
+];
+export const partners = [
+  {
+    id: 1,
+    img: image1,
+    title: "",
+  },
+  {
+    id: 2,
+    img: image2,
+    title: "",
+  },
+  {
+    id: 3,
+    img: image3,
+    title: "",
+  },
+  {
+    id: 4,
+    img: image4,
+    title: "",
+  },
+  {
+    id: 5,
+    img: image5,
+    title: "",
+  },
+  {
+    id: 6,
+    img: image6,
+    title: "",
+  },
+  {
+    id: 7,
+    img: image7,
+    title: "",
+  },
+  {
+    id: 8,
+    img: image8,
+    title: "",
+  },
+  {
+    id: 9,
+    img: image9,
+    title: "",
+  },
+  {
+    id: 10,
+    img: image10,
+    title: "",
+  },
+  {
+    id: 11,
+    img: image11,
+    title: "",
   },
 ];

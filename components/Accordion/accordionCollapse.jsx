@@ -1,18 +1,17 @@
 import React, { useState } from "react";
 import { Fade } from "react-awesome-reveal";
 
-const Accordion = ({ title, answer, i }) => {
+const AccordionCollapse = ({ title, answer, i }) => {
   const [accordionOpen, setAccordionOpen] = useState(false);
 
   return (
-    <Fade cascade>
-      <div className="py-4 hover:bg-slate-50 transition-all border-slate-100 border-t border-b">
+    <Fade>
+      <div className="pt-2 hover:bg-slate-50 transition-all border-slate-100 border-t border-b">
         <button
           onClick={() => setAccordionOpen(!accordionOpen)}
-          className="group container py-6 mx-auto flex justify-between transition-all"
+          className="group container py-6 mx-auto flex justify-around transition-all"
         >
-          <span className="text-[#999999] font-medium text-2xl">0{i}</span>
-          <span className="text-black font-bold text-3xl">{title}</span>
+          <span className="text-black font-medium text-2xl">{title}</span>
           <svg
             className="fill-black shrink-0 ml-8"
             width="16"
@@ -55,4 +54,4 @@ const Accordion = ({ title, answer, i }) => {
   );
 };
 
-export default Accordion;
+export default AccordionCollapse;
