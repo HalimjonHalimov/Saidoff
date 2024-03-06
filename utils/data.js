@@ -10,6 +10,7 @@ import image8 from "../public/partners/12.png";
 import image9 from "../public/partners/13.png";
 import image10 from "../public/partners/14.png";
 import image11 from "../public/partners/15.png";
+
 export const data = [
   {
     id: 1,
@@ -45,6 +46,7 @@ export const data = [
     },
   },
 ];
+
 export const partners = [
   {
     id: 1,
@@ -102,3 +104,63 @@ export const partners = [
     title: "",
   },
 ];
+
+export const socialMedia = [
+  {
+    id: 1,
+    title: "behance",
+    url: '/'
+  },
+  {
+    id: 2,
+    title: "dribbble",
+    url: '/'
+  },
+  {
+    id: 3,
+    title: "instagram",
+    url: '/'
+  },
+  {
+    id: 4,
+    title: "linkedin",
+    url: '/'
+  },
+  {
+    id: 5,
+    title: "facebook",
+    url: '/'
+  },
+  {
+    id: 6,
+    title: "Tiktok",
+    url: '/'
+  },
+];
+
+export const navItems = [
+  {
+    label: 'ГЛАВНАЯ',
+    url: '/'
+  },
+  {
+    label: 'О КОМПАНИИ',
+    url: '/about'
+  },
+  {
+    label: 'НАШИ УСЛУГИ И КЕЙСЫ',
+    url: '/services'
+  },
+  {
+    label: 'ОТЗЫВЫ НАШИХ КЛИЕНТОВ',
+    url: '/customers'
+  },
+  {
+    label: 'ВОПРОСЫ И ОТВЕТЫ',
+    url: '/FAQ'
+  },
+  {
+    label: 'КОНТАКТЫ',
+    url: '/contact'
+  },
+]

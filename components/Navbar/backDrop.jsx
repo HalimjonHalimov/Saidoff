@@ -5,13 +5,15 @@ const BackDrop = ({ onClick }) => {
       className="
             z-10
             backdrop-blur-md 
-            bg-white/30
+            bg-white/60
             w-screen
-            h-screen
+            h-full
             fixed
             top-0
             left-0
             overflow-hidden
+            transition-all 
+            delay-300
         
         "
     ></div>

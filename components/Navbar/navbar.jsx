@@ -19,11 +19,17 @@ import { GoArrowUpRight } from "react-icons/go";
 import BackDrop from "./backDrop";
 import { IoMdClose } from "react-icons/io";
 import moment from "moment";
+import { navItems, socialMedia } from "@/utils/data";
 
-export default function Navbar({ state, handleToggle }) {
+export default function Navbar() {
+  const [navigation, setNavigation] = useState(false);
+
+  const handleToggle = useCallback(() => {
+    setNavigation((prev) => !prev);
+  }, []);
   return (
     <>
-      <Fade cascade className="z-20">
+      <>
         <div className="w-full h-[100px] flex flex-col items-center justify-center bg-[#000000] text-[#FFFFFF]  border-b border-[#FFFFFF33]">
           <div className="relative container mx-auto flex justify-between items-center">
             <Link href="/">
@@ -47,101 +53,61 @@ export default function Navbar({ state, handleToggle }) {
                 <RxHamburgerMenu size={24} />
               </button>
             </div>
-            {state && (
-              <Slide
-                direction="right"
-                className="absolute w-[588px] h-auto  p-8 top-0 right-0 bg-white rounded-xl text-black"
-              >
-                <div className="">
-                  <div className="w-full h-auto flex justify-between items-center border-b border-black/25 py-4">
-                    <div className="text-lg font-medium text-[#7F7F7F]">
-                      Ташкент, Узбекистан{" "}
-                      <span className="text-black">
-                        {moment(new Date()).format("LT")}
-                      </span>
-                    </div>
-                    <button
-                      type="button"
-                      onClick={handleToggle}
-                      className="p-2 border border-black rounded-full"
-                    >
-                      <IoMdClose size={24} />
-                    </button>
-                  </div>
-                  <ul className="w-full h-auto pt-4 flex flex-col justify-start items-start gap-2 text-xl font-bold text-black uppercase">
-                    <li className="border-white border-b hover:border-black transition-all">
-                      <Link href={"/"}>Главная</Link>
-                    </li>
-                    <li className="border-white border-b hover:border-black transition-all">
-                      <Link href={"/"}>О компании</Link>
-                    </li>
-                    <li className="border-white border-b hover:border-black transition-all">
-                      <Link href={"/"}>наши услуги и кейсы</Link>
-                    </li>
-                    <li className="border-white border-b hover:border-black transition-all">
-                      <Link href={"/"}>Отзывы наших клиентов</Link>
-                    </li>
-                    <li className="border-white border-b hover:border-black transition-all">
-                      <Link href={"/"}>вопросы и ответы</Link>
-                    </li>
-                    <li className="border-white border-b hover:border-black transition-all">
-                      <Link href={"/"}>контакты</Link>
-                    </li>
-                  </ul>
-                  <ul className="w-full h-auto flex flex-col justify-end items-end">
-                    <li>
-                      <Link
-                        href={"/"}
-                        className="flex flex-row justify-start items-center border-white border-b hover:border-black transition-all gap-2 w-20 h-8 italic text-base font-semibold "
-                      >
-                        behance <GoArrowUpRight />
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href={"/"}
-                        className="flex flex-row justify-start items-center border-white border-b hover:border-black transition-all gap-2 w-20 h-8 italic text-base font-semibold "
-                      >
-                        dribbble <GoArrowUpRight />
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href={"/"}
-                        className="flex flex-row justify-start items-center border-white border-b hover:border-black transition-all gap-2 w-20 h-8 italic text-base font-semibold "
-                      >
-                        instagram <GoArrowUpRight />
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href={"/"}
-                        className="flex flex-row justify-start items-center border-white border-b hover:border-black transition-all gap-2 w-20 h-8 italic text-base font-semibold "
-                      >
-                        linkedin <GoArrowUpRight />
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href={"/"}
-                        className="flex flex-row justify-start items-center border-white border-b hover:border-black transition-all gap-2 w-20 h-8 italic text-base font-semibold "
-                      >
-                        facebook <GoArrowUpRight />
-                      </Link>
-                    </li>
-                  </ul>
-                  <Link
-                    href={"/"}
-                    className="w-44 h-auto py-2 flex flex-row justify-start items-center border-white border-b hover:border-black transition-all gap-2 italic text-base font-semibold "
-                  >
-                    {"hello@saidoff.agency"} <GoArrowUpRight />
-                  </Link>
+            <div
+              className={`absolute w-[588px] h-auto ${
+                navigation ? "top-0 opacity-100" : "top-40 opacity-0"
+              } p-8 right-0 bg-white rounded-xl text-black transition-all duration-150 ease-in-out z-20`}
+            >
+              <div className="w-full h-auto flex justify-between items-center border-b border-black/25 py-4">
+                <div className="text-lg font-medium text-[#7F7F7F]">
+                  Ташкент, Узбекистан{" "}
+                  <span className="text-black">
+                    {moment(new Date()).format("LT")}
+                  </span>
                 </div>
-              </Slide>
-            )}
+                <button
+                  type="button"
+                  onClick={handleToggle}
+                  className="p-2 border border-black rounded-full"
+                >
+                  <IoMdClose size={24} />
+                </button>
+              </div>
+              <ul className="w-full h-auto pt-4 flex flex-col justify-start items-start gap-2 text-xl font-bold text-black uppercase">
+                {navItems.map((item, i) => (
+                  <li
+                    key={i}
+                    className="border-white border-b hover:border-black transition-all"
+                  >
+                    <Link href={item.url}>{item.label}</Link>
+                  </li>
+                ))}
+              </ul>
+              <div className="flex justify-between items-end">
+                <Link
+                  href={"/"}
+                  className="w-44 h-auto py-2 flex flex-row justify-start items-center border-white border-b hover:border-black transition-all gap-2 italic text-base font-semibold "
+                >
+                  {"hello@saidoff.agency"} <GoArrowUpRight />
+                </Link>
+                <ul className="w-full h-auto flex flex-col justify-end items-end">
+                  {socialMedia.map((item, i) => (
+                    <li key={item.id}>
+                      <Link
+                        href={item.url}
+                        className="flex capitalize flex-row justify-start items-center border-white border-b hover:border-black transition-all gap-2 w-24 h-8 italic text-base font-semibold "
+                      >
+                        {item.title} <GoArrowUpRight />
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+            {navigation ? <BackDrop onClick={handleToggle} /> : null}
           </div>
         </div>
-      </Fade>
+      </>
     </>
   );
 }

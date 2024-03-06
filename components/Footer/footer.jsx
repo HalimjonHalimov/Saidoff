@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { Fade } from "react-awesome-reveal";
 import footer from "../../public/footer.png";
+import { navItems, socialMedia } from "@/utils/data";
 
 export default function Footer() {
   return (
@@ -14,25 +15,15 @@ export default function Footer() {
               <div className="text-xl font-medium text-[#999]">
                 Наши социальные сети:
               </div>
-              <ul className="grid grid-cols-3 gap-4 text-2xl font-semibold ">
-                <li className="hover:border-b hover:border-white border-black border-b transition-all">
-                  <Link href={"/"}>Instagram</Link>
-                </li>
-                <li className="hover:border-b hover:border-white border-black border-b transition-all">
-                  <Link href={"/"}>Facebook</Link>
-                </li>
-                <li className="hover:border-b hover:border-white border-black border-b transition-all">
-                  <Link href={"/"}>Tiktok</Link>
-                </li>
-                <li className="hover:border-b hover:border-white border-black border-b transition-all">
-                  <Link href={"/"}>Linkedin</Link>
-                </li>
-                <li className="hover:border-b hover:border-white border-black border-b transition-all">
-                  <Link href={"/"}>Youtube</Link>
-                </li>
-                <li className="hover:border-b hover:border-white border-black border-b transition-all">
-                  <Link href={"/"}>Behance</Link>
-                </li>
+              <ul className="grid grid-cols-3 gap-4 text-2xl font-semibold uppercase">
+                {socialMedia.map((item, i) => (
+                  <li
+                    key={i}
+                    className="hover:border-b hover:border-white border-black border-b transition-all"
+                  >
+                    <Link href={item.url}>{item.title}</Link>
+                  </li>
+                ))}
               </ul>
             </div>
             <div className="w-full h-auto grid grid-cols-3 justify-start items-baseline ">
@@ -44,7 +35,11 @@ export default function Footer() {
           </div>
           <div className="w-full h-auto py-8 flex flex-col justify-center items-center gap-4">
             <div className="w-[1062] h-[450px]">
-              <Image src={footer} alt="" className="w-full h-full object-cover" />
+              <Image
+                src={footer}
+                alt=""
+                className="w-full h-full object-cover"
+              />
             </div>
             <div className="text-center text-3xl font-semibold text-balance">
               Давайте разработаем план и добьемся реальных результатов. Давайте
