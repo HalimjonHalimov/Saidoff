@@ -8,7 +8,7 @@ export default function Layout({ children }) {
   return (
     <>
       <Fade cascade>
-        <div className="w-full min-h-screen flex flex-col overflow-hidden">
+        <div className="relative w-full min-h-screen flex flex-col overflow-hidden">
           <Navbar  />
           <main className="">{children}</main>
           <Footer />

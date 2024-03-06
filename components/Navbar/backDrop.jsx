@@ -4,8 +4,8 @@ const BackDrop = ({ onClick }) => {
       onClick={onClick}
       className="
             z-10
-            backdrop-blur-md 
-            bg-white/60
+            backdrop-blur-sm
+            bg-[rgba(255,255,255,0.07)]
             w-screen
             h-full
             fixed
