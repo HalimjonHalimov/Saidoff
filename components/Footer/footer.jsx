@@ -15,22 +15,22 @@ export default function Footer() {
                 Наши социальные сети:
               </div>
               <ul className="grid grid-cols-3 gap-4 text-2xl font-semibold ">
-                <li>
+                <li className="hover:border-b hover:border-white border-black border-b transition-all">
                   <Link href={"/"}>Instagram</Link>
                 </li>
-                <li>
+                <li className="hover:border-b hover:border-white border-black border-b transition-all">
                   <Link href={"/"}>Facebook</Link>
                 </li>
-                <li>
+                <li className="hover:border-b hover:border-white border-black border-b transition-all">
                   <Link href={"/"}>Tiktok</Link>
                 </li>
-                <li>
+                <li className="hover:border-b hover:border-white border-black border-b transition-all">
                   <Link href={"/"}>Linkedin</Link>
                 </li>
-                <li>
+                <li className="hover:border-b hover:border-white border-black border-b transition-all">
                   <Link href={"/"}>Youtube</Link>
                 </li>
-                <li>
+                <li className="hover:border-b hover:border-white border-black border-b transition-all">
                   <Link href={"/"}>Behance</Link>
                 </li>
               </ul>

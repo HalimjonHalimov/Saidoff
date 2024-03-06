@@ -26,18 +26,20 @@ export default function Questions() {
             </span>
           </button>
         </div>
-        <AccordionCollapse
-          title="IT компания предоставляет широкий спектр услуг и продуктов в области информационных"
-          answer=""
-        />
-        <AccordionCollapse
-          title="IT компания предоставляет широкий спектр услуг и продуктов в области информационных"
-          answer=""
-        />
-        <AccordionCollapse
-          title="IT компания предоставляет широкий спектр услуг и продуктов в области информационных"
-          answer=""
-        />
+        <div className="container mx-auto flex flex-col gap-2">
+          <AccordionCollapse
+            title="IT компания предоставляет широкий спектр услуг и продуктов в области информационных"
+            answer=""
+          />
+          <AccordionCollapse
+            title="IT компания предоставляет широкий спектр услуг и продуктов в области информационных"
+            answer=""
+          />
+          <AccordionCollapse
+            title="IT компания предоставляет широкий спектр услуг и продуктов в области информационных"
+            answer=""
+          />
+        </div>
       </div>
     </Fade>
   );
