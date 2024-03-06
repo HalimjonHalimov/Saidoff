@@ -43,7 +43,9 @@ export default function Footer() {
             </div>
           </div>
           <div className="w-full h-auto py-8 flex flex-col justify-center items-center gap-4">
-            <Image src={footer} alt="" className="object-cover" />
+            <div className="w-[1062] h-[450px]">
+              <Image src={footer} alt="" className="w-full h-full object-cover" />
+            </div>
             <div className="text-center text-3xl font-semibold text-balance">
               Давайте разработаем план и добьемся реальных результатов. Давайте
               сделаем это по-крупному
