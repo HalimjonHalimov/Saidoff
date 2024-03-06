@@ -9,6 +9,7 @@ import { FaPlayCircle } from "react-icons/fa";
 import { GoArrowUpRight } from "react-icons/go";
 import { Fade } from "react-awesome-reveal";
 import Swipper from "@/components/Swipper/swipper";
+import Slider from "@/components/Swipper/swipper";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -104,7 +105,7 @@ export default function Home() {
         <div className="w-full h-auto my-16 py-[80px] bg-[#f1f1f1]">
           <div className="container mx-auto flex justify-between items-center">
             <div className="flex flex-col gap-2 items-start justify-center">
-              <h4 className="font-bold text-4xl text-black mb-2">О компании</h4>
+              <h4 className="font-bold text-4xl text-black mb-2 uppercase">О компании</h4>
               <button
                 type="button"
                 className="py-2 px-4 flex items-center justify-center gap-2 bg-white text-black border border-black rounded-full hover:bg-black hover:text-white transition-all"
@@ -128,7 +129,7 @@ export default function Home() {
           </div>
         </div>
       </Fade>
-      <Swipper />
+      <Slider />
     </Layout>
   );
 }
