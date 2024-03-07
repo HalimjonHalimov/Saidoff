@@ -19,7 +19,7 @@ export default function Header() {
       <div
         className={`${inter.className} w-full h-auto bg-hero bg-black/95 text-white`}
       >
-        <div className=" container mx-auto  py-[70px]">
+        <div className=" container mx-auto  py-[80px]">
           <div className="grid grid-cols-2">
             <div className="text-start text-4xl font-bold">
               МЫ СОЗДАЕМ <br /> ЗАМЕЧАТЕЛЬНЫЕ
